@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     config.vm.provider "docker" do |d|
-        d.build_dir = "docker"
+        d.build_dir = "server"
         d.expose = ["2000"]
         d.ports = ["2000:2000" ]
         d.vagrant_vagrantfile = "host/Vagrantfile"
