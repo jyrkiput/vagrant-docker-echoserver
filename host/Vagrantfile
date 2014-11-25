@@ -7,6 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "mitchellh/boot2docker"
   config.vm.network "forwarded_port", guest: 2000, host: 2000
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
   config.vm.provider "virtualbox" do |v|
     # On VirtualBox, we don't have guest additions or a functional vboxsf
     # in TinyCore Linux, so tell Vagrant that so it can be smarter.
