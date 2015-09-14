@@ -2,5 +2,7 @@ Demonstrating docker provisioner. Set up two containers, a server and a proxy. T
 
 To test this, run:
 
-    vagrant up --provider docker
+    vagrant up --no-parallel --provider docker
     telnet localhost 3000
+
+--no-parallel is required as otherwise bulding of images fails.
